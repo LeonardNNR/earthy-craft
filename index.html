@@ -6,18 +6,14 @@
     <title>Earthy Crafts | Handcrafted Artisan Creations</title>
     <meta name="description" content="Discover handcrafted creations inspired by nature, simplicity, and timeless beauty. Based in Naga City, Camarines Sur.">
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Tailwind Configuration for Earthy Crafts Palette -->
     <script>
         tailwind.config = {
             theme: {
@@ -41,7 +37,6 @@
         }
     </script>
 
-    <!-- Custom Premium Animations & Styles -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -78,19 +73,16 @@
 </head>
 <body class="selection:bg-sage/30 selection:text-forest">
 
-    <!-- Custom Loader -->
     <div id="loader" class="fixed inset-0 z-50 bg-cream flex flex-col justify-center items-center transition-opacity duration-700">
         <h1 class="text-4xl md:text-5xl text-forest font-serif italic mb-2 tracking-wide">Earthy Crafts</h1>
         <div class="w-12 h-[1px] bg-clay animate-pulse"></div>
         <p class="text-xs tracking-[0.2em] uppercase text-clay/70 mt-3">Patience & Nature</p>
     </div>
 
-    <!-- Header Navigation -->
     <header class="fixed top-0 left-0 w-full z-40 bg-cream/80 backdrop-blur-md border-b border-sand/20 transition-all duration-300 px-6 py-4 md:px-12">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="#" class="text-2xl md:text-3xl font-serif font-bold text-forest tracking-wide">Earthy Crafts.</a>
             
-            <!-- Desktop Nav -->
             <nav class="hidden md:flex space-x-8 text-sm tracking-widest uppercase font-medium text-forest/80">
                 <a href="#about" class="hover:text-terracotta transition-colors">Our Story</a>
                 <a href="#featured" class="hover:text-terracotta transition-colors">Featured</a>
@@ -99,13 +91,11 @@
                 <a href="#contact" class="hover:text-terracotta transition-colors">Connect</a>
             </nav>
 
-            <!-- Mobile Menu Toggle -->
             <button id="menu-btn" class="md:hidden text-forest text-xl focus:outline-none" aria-label="Toggle Menu">
                 <i class="fa-solid fa-bars-staggered"></i>
             </button>
         </div>
 
-        <!-- Mobile Nav Menu -->
         <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-cream border-b border-sand/30 flex flex-col p-6 space-y-4 text-center tracking-widest uppercase text-sm shadow-sm">
             <a href="#about" class="mobile-link py-2 text-forest hover:text-terracotta">Our Story</a>
             <a href="#featured" class="mobile-link py-2 text-forest hover:text-terracotta">Featured</a>
@@ -115,7 +105,6 @@
         </div>
     </header>
 
-    <!-- 1. Hero Section -->
     <section class="relative min-h-screen bg-beige flex items-center pt-20 overflow-hidden px-6 md:px-12">
         <div class="absolute top-1/4 -left-10 w-72 h-72 bg-sage/10 rounded-full blur-3xl pointer-events-none"></div>
         <div class="absolute bottom-1/4 -right-10 w-96 h-96 bg-sand/20 rounded-full blur-3xl pointer-events-none"></div>
@@ -128,7 +117,6 @@
         </div>
 
         <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <!-- Hero Text -->
             <div class="lg:col-span-6 z-10 space-y-6 text-center lg:text-left">
                 <span class="text-xs tracking-[0.3em] uppercase text-clay font-semibold block">Artisan Studio • Naga City</span>
                 <h1 class="text-5xl md:text-7xl text-forest font-serif leading-tight">
@@ -147,21 +135,17 @@
                 </div>
             </div>
 
-            <!-- Hero Image Showcase -->
             <div class="lg:col-span-6 relative flex justify-center items-center">
                 <div class="relative w-full max-w-md h-[450px] md:h-[520px]">
                     <div class="absolute inset-4 border border-clay/20 z-0"></div>
                     
-                    <!-- Main Hero Image Component -->
                     <div class="absolute top-0 right-4 w-[85%] h-[85%] shadow-xl overflow-hidden rounded-xs">
-                        <!-- REPLACE WITH YOUR IMAGE PATH (e.g., src="hero-bracelets.jpg") -->
                         <img src="images/image1.jpg" 
                              alt="Earthy Crafts Handmade Bracelets" 
                              id="hero-img-main"
                              class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
                     </div>
                     
-                    <!-- Secondary Accent Frame Overlay -->
                     <div class="absolute bottom-0 left-0 w-[55%] h-[45%] bg-forest p-6 text-cream shadow-2xl flex flex-col justify-between z-10">
                         <span class="text-[10px] tracking-[0.2em] uppercase opacity-60">100% Handcrafted</span>
                         <p class="font-serif text-lg italic leading-tight">"Embrace the organic textures of raw elements."</p>
@@ -178,15 +162,12 @@
         </div>
     </section>
 
-    <!-- 2. About Section -->
     <section id="about" class="py-24 px-6 md:px-12 bg-cream text-forest overflow-hidden">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
-            <!-- Left Grid: Creative Image Split Layout -->
             <div class="reveal grid grid-cols-2 gap-4 relative">
                 <div class="space-y-4">
                     <div class="h-64 rounded-sm overflow-hidden shadow-xs relative group">
-                        <!-- REPLACE WITH YOUR IMAGE PATH (e.g., src="about-1.jpg") -->
                         <img src="images/image2.jpg" alt="Beading and Crafting Materials" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-forest/20 flex items-end p-4">
                             <span class="font-serif italic text-cream text-base">Handmade Bracelets</span>
@@ -201,7 +182,6 @@
                         <i class="fa-solid fa-water text-forest/40 text-3xl"></i>
                     </div>
                     <div class="h-64 rounded-sm overflow-hidden shadow-xs relative group">
-                        <!-- REPLACE WITH YOUR IMAGE PATH (e.g., src="about-2.jpg") -->
                         <img src="images/image3.jpg" alt="Handmade Ceramics Process" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-forest/20 flex items-end p-4">
                             <span class="font-serif italic text-cream text-base">Natural Beading & Earthy Stones</span>
@@ -210,7 +190,6 @@
                 </div>
             </div>
 
-            <!-- Right Grid: Storytelling Content -->
             <div class="reveal space-y-6">
                 <span class="text-xs tracking-[0.3em] uppercase text-clay font-semibold">Honoring the Craft</span>
                 <h2 class="text-4xl md:text-5xl font-serif leading-tight">Rooted in Passion, Inspired by Simplicity</h2>
@@ -243,7 +222,6 @@
         </div>
     </section>
 
-    <!-- 3. Featured Creations (Masonry style layout) -->
     <section id="featured" class="py-24 px-6 md:px-12 bg-beige">
         <div class="max-w-7xl mx-auto space-y-12">
             <div class="text-center space-y-3">
@@ -252,13 +230,10 @@
                 <p class="text-sm text-forest/60 max-w-md mx-auto">A glimpse into our signature textures, warm earth palettes, and delicate details.</p>
             </div>
 
-            <!-- Pseudo-Masonry Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
                 
-                <!-- Item 1 (Tall) -->
                 <div class="reveal bg-cream group p-4 border border-sand/30 shadow-sm hover:shadow-xl transition-all duration-500">
                     <div class="h-80 relative overflow-hidden flex items-center justify-center bg-sand/20">
-                        <!-- REPLACE WITH YOUR IMAGE PATH (e.g., src="featured-1.jpg") -->
                         <img src="images/image7.jpg" alt="Rustic Clay Bead Set" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 bg-forest/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-xs">
                             <span class="text-cream font-serif italic text-lg tracking-wider border-b border-cream/40 pb-1">Want it? Dm us</span>
@@ -270,10 +245,8 @@
                     </div>
                 </div>
 
-                <!-- Item 2 (Short) -->
                 <div class="reveal bg-cream group p-4 border border-sand/30 shadow-sm hover:shadow-xl transition-all duration-500 lg:mt-12">
                     <div class="h-64 relative overflow-hidden flex items-center justify-center bg-sand/20">
-                        <!-- REPLACE WITH YOUR IMAGE PATH (e.g., src="featured-2.jpg") -->
                         <img src="images/image8.jpg" alt="Irregular Pearl Accent" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 bg-forest/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-xs">
                             <span class="text-cream font-serif italic text-lg tracking-wider border-b border-cream/40 pb-1">Want it? Dm us</span>
@@ -285,10 +258,8 @@
                     </div>
                 </div>
 
-                <!-- Item 3 (Tall) -->
                 <div class="reveal bg-cream group p-4 border border-sand/30 shadow-sm hover:shadow-xl transition-all duration-500">
                     <div class="h-96 relative overflow-hidden flex items-center justify-center bg-sand/20">
-                        <!-- REPLACE WITH YOUR IMAGE PATH (e.g., src="featured-3.jpg") -->
                         <img src="images/image9.jpg" alt="Raw Espresso Mug" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 bg-forest/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-xs">
                             <span class="text-cream font-serif italic text-lg tracking-wider border-b border-cream/40 pb-1">Want it? Dm us</span>
@@ -304,7 +275,6 @@
         </div>
     </section>
 
-    <!-- 4. Crafting Process Timeline -->
     <section id="process" class="py-24 px-6 md:px-12 bg-cream">
         <div class="max-w-7xl mx-auto">
             <div class="text-center space-y-3 mb-16">
@@ -315,7 +285,6 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
                 
-                <!-- Step 1 -->
                 <div class="reveal text-center space-y-4 relative group">
                     <div class="w-16 h-16 mx-auto bg-beige border border-sand rounded-full flex items-center justify-center text-forest group-hover:bg-forest group-hover:text-cream transition-colors duration-300">
                         <i class="fa-solid fa-compass text-lg"></i>
@@ -325,7 +294,6 @@
                     <p class="text-xs text-forest/70 leading-relaxed px-4">Gathering structural mood boards from local Bikolano landscapes, shorelines, and forest floors.</p>
                 </div>
 
-                <!-- Step 2 -->
                 <div class="reveal text-center space-y-4 relative group lg:pt-6">
                     <div class="w-16 h-16 mx-auto bg-beige border border-sand rounded-full flex items-center justify-center text-forest group-hover:bg-forest group-hover:text-cream transition-colors duration-300">
                         <i class="fa-solid fa-seedling text-lg"></i>
@@ -335,7 +303,6 @@
                     <p class="text-xs text-forest/70 leading-relaxed px-4">Selecting hand-cast stones, authentic raw pearls, and rich organic clay bodies selectively.</p>
                 </div>
 
-                <!-- Step 3 -->
                 <div class="reveal text-center space-y-4 relative group">
                     <div class="w-16 h-16 mx-auto bg-beige border border-sand rounded-full flex items-center justify-center text-forest group-hover:bg-forest group-hover:text-cream transition-colors duration-300">
                         <i class="fa-solid fa-hands text-lg"></i>
@@ -345,7 +312,6 @@
                     <p class="text-xs text-forest/70 leading-relaxed px-4">Each bead is tightly strung and every handle shaped intentionally by human hands alone.</p>
                 </div>
 
-                <!-- Step 4 -->
                 <div class="reveal text-center space-y-4 relative group lg:pt-6">
                     <div class="w-16 h-16 mx-auto bg-beige border border-sand rounded-full flex items-center justify-center text-forest group-hover:bg-forest group-hover:text-cream transition-colors duration-300">
                         <i class="fa-solid fa-box-open text-lg"></i>
@@ -359,7 +325,6 @@
         </div>
     </section>
 
-    <!-- 5. Portfolio Showcase (With Filter Capabilities) -->
     <section id="portfolio" class="py-24 px-6 md:px-12 bg-beige overflow-hidden">
         <div class="max-w-7xl mx-auto space-y-12">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
@@ -376,12 +341,9 @@
                 </div>
             </div>
 
-            <!-- Portfolio Grid Layout Container -->
             <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 transition-all duration-500">
                 
-                <!-- Portfolio Item 1 -->
                 <div class="portfolio-item reveal bg-cream p-3 border border-sand/20" data-category="bracelets">
-                    <!-- REPLACE WITH YOUR IMAGE PATH (e.g., data-img="bracelet1.jpg") -->
                     <div class="h-60 flex items-center justify-center relative group cursor-pointer overflow-hidden rounded-xs bg-sand/10" 
                          data-img="images/image11.jpg"
                          onclick="openLightbox('Sienna Earth Strand', 'Bracelets', this.getAttribute('data-img'))">
@@ -394,11 +356,9 @@
                     <span class="text-[10px] uppercase tracking-widest text-clay">Bracelets</span>
                 </div>
 
-                <!-- Portfolio Item 2 -->
                 <div class="portfolio-item reveal bg-cream p-3 border border-sand/20" data-category="ceramics">
-                    <!-- REPLACE WITH YOUR IMAGE PATH (e.g., data-img="mug1.jpg") -->
                     <div class="h-60 flex items-center justify-center relative group cursor-pointer overflow-hidden rounded-xs bg-sand/10" 
-                         data-img="https://images.unsplash.com/photo-1610601594989-61b408503201?auto=format&fit=crop&w=600&q=80"
+                         data-img="images/image1.jpg"
                          onclick="openLightbox('Bikol Clay Tea Vessel', 'Ceramics', this.getAttribute('data-img'))">
                         <img src="images/image1.jpg" alt="Bikol Clay Tea Vessel" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 bg-forest/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -409,9 +369,7 @@
                     <span class="text-[10px] uppercase tracking-widest text-clay">Ceramics</span>
                 </div>
 
-                <!-- Portfolio Item 3 -->
                 <div class="portfolio-item reveal bg-cream p-3 border border-sand/20" data-category="accessories">
-                    <!-- REPLACE WITH YOUR IMAGE PATH (e.g., data-img="accessory1.jpg") -->
                     <div class="h-60 flex items-center justify-center relative group cursor-pointer overflow-hidden rounded-xs bg-sand/10" 
                          data-img="images/image3.jpg"
                          onclick="openLightbox('Linen Carry Wrap', 'Accessories', this.getAttribute('data-img'))">
@@ -424,9 +382,7 @@
                     <span class="text-[10px] uppercase tracking-widest text-clay">Accessories</span>
                 </div>
 
-                <!-- Portfolio Item 4 -->
                 <div class="portfolio-item reveal bg-cream p-3 border border-sand/20" data-category="bracelets">
-                    <!-- REPLACE WITH YOUR IMAGE PATH (e.g., data-img="pearl1.jpg") -->
                     <div class="h-60 flex items-center justify-center relative group cursor-pointer overflow-hidden rounded-xs bg-sand/10" 
                          data-img="images/image4.jpg"
                          onclick="openLightbox('Baroque Sea Pearl', 'Bracelets', this.getAttribute('data-img'))">
@@ -443,7 +399,6 @@
         </div>
     </section>
 
-    <!-- Lightbox Modal Component -->
     <div id="lightbox" class="fixed inset-0 bg-forest/90 z-50 hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4 backdrop-blur-md">
         <button class="absolute top-6 right-6 text-cream text-2xl" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></button>
         <div class="bg-cream max-w-xl w-full p-8 text-center space-y-4 shadow-2xl relative">
@@ -459,7 +414,6 @@
         </div>
     </div>
 
-    <!-- 6. Brand Philosophy -->
     <section class="relative py-32 bg-forest text-cream overflow-hidden text-center px-6">
         <div class="absolute inset-0 opacity-5 bg-[radial-gradient(#FAF8F3_1px,transparent_1px)] [background-size:16px_16px]"></div>
         
@@ -473,7 +427,6 @@
         </div>
     </section>
 
-    <!-- 7. Testimonials Section -->
     <section class="py-24 px-6 md:px-12 bg-cream">
         <div class="max-w-7xl mx-auto space-y-12">
             <div class="text-center space-y-2">
@@ -482,7 +435,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Review 1 -->
                 <div class="reveal bg-beige p-8 border border-sand/30 space-y-4 flex flex-col justify-between">
                     <div class="space-y-3">
                         <div class="flex text-gold text-xs gap-1">
@@ -495,7 +447,6 @@
                         <span class="text-[10px] text-clay tracking-wider uppercase">Naga City Collector</span>
                     </div>
                 </div>
-                <!-- Review 2 -->
                 <div class="reveal bg-beige p-8 border border-sand/30 space-y-4 flex flex-col justify-between">
                     <div class="space-y-3">
                         <div class="flex text-gold text-xs gap-1">
@@ -508,7 +459,6 @@
                         <span class="text-[10px] text-clay tracking-wider uppercase">Manila Enthusiast</span>
                     </div>
                 </div>
-                <!-- Review 3 -->
                 <div class="reveal bg-beige p-8 border border-sand/30 space-y-4 flex flex-col justify-between">
                     <div class="space-y-3">
                         <div class="flex text-gold text-xs gap-1">
@@ -525,7 +475,6 @@
         </div>
     </section>
 
-    <!-- 8. Instagram Journal Studio Showcase -->
     <section class="py-24 px-6 md:px-12 bg-beige border-t border-sand/20">
         <div class="max-w-7xl mx-auto space-y-8">
             <div class="flex justify-between items-end">
@@ -536,24 +485,19 @@
                 <a href="#" class="text-xs uppercase tracking-widest font-medium text-forest hover:text-terracotta transition-colors border-b border-forest/30 pb-1">@EarthyCraftsStudio</a>
             </div>
 
-            <!-- Instagram Grid Layout -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <!-- REPLACE WITH YOUR IMAGE PATH (e.g., src="insta-1.jpg") -->
                 <div class="reveal aspect-square relative group overflow-hidden border border-sand/30 rounded-xs">
                     <img src="images/image10.jpg" alt="Workshop table layout" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-forest/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-cream"><i class="fa-brands fa-instagram text-xl"></i></div>
                 </div>
-                <!-- REPLACE WITH YOUR IMAGE PATH (e.g., src="insta-2.jpg") -->
                 <div class="reveal aspect-square relative group overflow-hidden border border-sand/30 rounded-xs">
                     <img src="images/image1.jpg" alt="Freshwater pearls process" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-forest/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-cream"><i class="fa-brands fa-instagram text-xl"></i></div>
                 </div>
-                <!-- REPLACE WITH YOUR IMAGE PATH (e.g., src="insta-3.jpg") -->
                 <div class="reveal aspect-square relative group overflow-hidden border border-sand/30 rounded-xs">
                     <img src="images/image7.jpg" alt="Clay drying racks" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-forest/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-cream"><i class="fa-brands fa-instagram text-xl"></i></div>
                 </div>
-                <!-- REPLACE WITH YOUR IMAGE PATH (e.g., src="insta-4.jpg") -->
                 <div class="reveal aspect-square relative group overflow-hidden border border-sand/30 rounded-xs">
                     <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=500&q=80" alt="Naga City Studio space" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-forest/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-cream"><i class="fa-brands fa-instagram text-xl"></i></div>
@@ -562,7 +506,6 @@
         </div>
     </section>
 
-    <!-- 9. Premium Elegant Contact Section -->
     <section id="contact" class="py-24 px-6 md:px-12 bg-cream relative">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
             
@@ -580,45 +523,42 @@
                     </div>
                     <div class="flex items-center space-x-3">
                         <i class="fa-solid fa-envelope text-terracotta w-5 text-center"></i>
-                        <span class="text-forest/80 font-light">yourbusinessemail@earthycrafts.studio</span>
+                        <span class="text-forest/80 font-light">nnrleonardjazareno@gmail.com</span>
                     </div>
                 </div>
 
                 <div class="flex space-x-4 pt-2">
                     <a href="https://web.facebook.com/profile.php?id=61572070153511" class="w-8 h-8 rounded-full border border-forest/20 text-forest hover:bg-forest hover:text-cream transition-colors flex items-center justify-center text-xs" aria-label="Facebook link"><i class="fa-brands fa-facebook-f"></i></a>
-                    <!-- <a href="#" class="w-8 h-8 rounded-full border border-forest/20 text-forest hover:bg-forest hover:text-cream transition-colors flex items-center justify-center text-xs" aria-label="Instagram link"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full border border-forest/20 text-forest hover:bg-forest hover:text-cream transition-colors flex items-center justify-center text-xs" aria-label="Pinterest link"><i class="fa-brands fa-pinterest-p"></i></a>-->
                 </div>
             </div>
 
-            <!-- Form Column -->
             <div class="lg:col-span-7 bg-beige p-8 border border-sand/30 shadow-xs">
-                <form onsubmit="event.preventDefault(); alert('Thank you for connecting with Earthy Crafts. We will reach out thoughtfully.');" class="space-y-6">
+                <form id="contact-form" action="https://formspree.io/f/mykqkybl" method="POST" class="space-y-6">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div class="space-y-1">
                             <label for="name" class="text-[10px] tracking-widest uppercase font-semibold text-clay">Your Name</label>
-                            <input type="text" id="name" required class="w-full bg-cream border-b border-sand/60 focus:border-forest p-3 text-sm text-forest outline-none transition-colors">
+                            <input type="text" id="name" name="name" required class="w-full bg-cream border-b border-sand/60 focus:border-forest p-3 text-sm text-forest outline-none transition-colors">
                         </div>
                         <div class="space-y-1">
                             <label for="email" class="text-[10px] tracking-widest uppercase font-semibold text-clay">Email Address</label>
-                            <input type="email" id="email" required class="w-full bg-cream border-b border-sand/60 focus:border-forest p-3 text-sm text-forest outline-none transition-colors">
+                            <input type="email" id="email" name="email" required class="w-full bg-cream border-b border-sand/60 focus:border-forest p-3 text-sm text-forest outline-none transition-colors">
                         </div>
                     </div>
                     <div class="space-y-1">
                         <label for="interest" class="text-[10px] tracking-widest uppercase font-semibold text-clay">Primary Interest</label>
-                        <select id="interest" class="w-full bg-cream border-b border-sand/60 focus:border-forest p-3 text-sm text-forest outline-none transition-colors">
-                            <option>Custom Bracelet Order</option>
-                            <option>Ceramics Gallery Viewing</option>
-                            <option>Creative Partnership</option>
-                            <option>General Studio Inquiry</option>
+                        <select id="interest" name="interest" class="w-full bg-cream border-b border-sand/60 focus:border-forest p-3 text-sm text-forest outline-none transition-colors">
+                            <option value="Custom Bracelet Order">Custom Bracelet Order</option>
+                            <option value="Ceramics Gallery Viewing">Ceramics Gallery Viewing</option>
+                            <option value="Creative Partnership">Creative Partnership</option>
+                            <option value="General Studio Inquiry">General Studio Inquiry</option>
                         </select>
                     </div>
                     <div class="space-y-1">
                         <label for="message" class="text-[10px] tracking-widest uppercase font-semibold text-clay">Your Message</label>
-                        <textarea id="message" rows="4" required class="w-full bg-cream border-b border-sand/60 focus:border-forest p-3 text-sm text-forest outline-none transition-colors resize-none"></textarea>
+                        <textarea id="message" name="message" rows="4" required class="w-full bg-cream border-b border-sand/60 focus:border-forest p-3 text-sm text-forest outline-none transition-colors resize-none"></textarea>
                     </div>
-                    <button type="submit" class="w-full py-4 bg-forest text-cream text-xs uppercase tracking-[0.2em] font-medium hover:bg-clay transition-colors duration-300 shadow-sm">
-                        Send Letter
+                    <button type="submit" id="submit-btn" class="w-full py-4 bg-forest text-cream text-xs uppercase tracking-[0.2em] font-medium hover:bg-clay transition-colors duration-300 shadow-sm flex justify-center items-center gap-2">
+                        <span>Send Letter</span>
                     </button>
                 </form>
             </div>
@@ -626,7 +566,6 @@
         </div>
     </section>
 
-    <!-- 10. Footer Section -->
     <footer class="bg-forest text-cream py-16 px-6 md:px-12 border-t border-cream/10">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
             <div class="space-y-2">
@@ -648,7 +587,6 @@
         </div>
     </footer>
 
-    <!-- Pure Frontend Functional Scripting -->
     <script>
         // 1. Loading Animation dismissal logic
         window.addEventListener('load', () => {
@@ -734,6 +672,48 @@
             lightbox.classList.remove('opacity-100');
             setTimeout(() => lightbox.classList.add('hidden'), 300);
         }
+
+        // 6. Asynchronous Contact Form Submission Handler (AJAX)
+        const form = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // UI State Change: Show Loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<span>Sending Letter...</span> <i class="fa-solid fa-spinner animate-spin"></i>`;
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    alert('Thank you for connecting with Earthy Crafts. Your letter has been sent beautifully, and we will reach out thoughtfully.');
+                    form.reset(); // Clear the form fields upon success
+                } else {
+                    const data = await response.json();
+                    if (Object.hasOwn(data, 'errors')) {
+                        alert(data.errors.map(error => error.message).join(", "));
+                    } else {
+                        alert('Oops! There was a problem submitting your form. Please check your network and try again.');
+                    }
+                }
+            } catch (error) {
+                alert('An error occurred. Please try again later.');
+            } finally {
+                // UI State Reset
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = `<span>Send Letter</span>`;
+            }
+        });
     </script>
 </body>
 </html>
