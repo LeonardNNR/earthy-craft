@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthy Crafts | Handcrafted Artisan Creations</title>
+    <meta name="description" content="Discover handcrafted creations inspired by nature, simplicity, and timeless beauty. Based in Naga City, Camarines Sur.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Configuration for Earthy Crafts Palette -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: '#2E4A3D',
+                        sage: '#A8BBA3',
+                        clay: '#8B6B4E',
+                        beige: '#F5F1E8',
+                        sand: '#DCCEB5',
+                        cream: '#FAF8F3',
+                        terracotta: '#C47A5A',
+                        gold: '#C9A86A',
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Premium Animations & Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAF8F3;
+            color: #2E4A3D;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Leaf Floating Animation */
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .floating-leaf {
+            animation: float 6s ease-in-out infinite;
+        }
+        .floating-leaf-delayed {
+            animation: float 8s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+    </style>
+</head>
+<body class="selection:bg-sage/30 selection:text-forest">
+
+    <!-- Custom Loader -->
+    <div id="loader" class="fixed inset-0 z-50 bg-cream flex flex-col justify-center items-center transition-opacity duration-700">
+        <h1 class="text-4xl md:text-5xl text-forest font-serif italic mb-2 tracking-wide">Earthy Crafts</h1>
+        <div class="w-12 h-[1px] bg-clay animate-pulse"></div>
+        <p class="text-xs tracking-[0.2em] uppercase text-clay/70 mt-3">Patience & Nature</p>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 w-full z-40 bg-cream/80 backdrop-blur-md border-b border-sand/20 transition-all duration-300 px-6 py-4 md:px-12">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl md:text-3xl font-serif font-bold text-forest tracking-wide">Earthy Crafts.</a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-8 text-sm tracking-widest uppercase font-medium text-forest/80">
+                <a href="#about" class="hover:text-terracotta transition-colors">Our Story</a>
+                <a href="#featured" class="hover:text-terracotta transition-colors">Featured</a>
+                <a href="#process" class="hover:text-terracotta transition-colors">The Process</a>
+                <a href="#portfolio" class="hover:text-terracotta transition-colors">Portfolio</a>
+                <a href="#contact" class="hover:text-terracotta transition-colors">Connect</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-btn" class="md:hidden text-forest text-xl focus:outline-none" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-cream border-b border-sand/30 flex flex-col p-6 space-y-4 text-center tracking-widest uppercase text-sm shadow-sm">
+            <a href="#about" class="mobile-link py-2 text-forest hover:text-terracotta">Our Story</a>
+            <a href="#featured" class="mobile-link py-2 text-forest hover:text-terracotta">Featured</a>
+            <a href="#process" class="mobile-link py-2 text-forest hover:text-terracotta">The Process</a>
+            <a href="#portfolio" class="mobile-link py-2 text-forest hover:text-terracotta">Portfolio</a>
+            <a href="#contact" class="mobile-link py-2 text-forest hover:text-terracotta">Connect</a>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section class="relative min-h-screen bg-beige flex items-center pt-20 overflow-hidden px-6 md:px-12">
+        <div class="absolute top-1/4 -left-10 w-72 h-72 bg-sage/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-1/4 -right-10 w-96 h-96 bg-sand/20 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="absolute top-1/3 right-[10%] text-sage/30 text-4xl floating-leaf hidden lg:block">
+            <i class="fa-solid fa-leaf"></i>
+        </div>
+        <div class="absolute bottom-1/4 left-[5%] text-clay/20 text-3xl floating-leaf-delayed hidden lg:block">
+            <i class="fa-solid fa-seedling"></i>
+        </div>
+
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Hero Text -->
+            <div class="lg:col-span-6 z-10 space-y-6 text-center lg:text-left">
+                <span class="text-xs tracking-[0.3em] uppercase text-clay font-semibold block">Artisan Studio • Naga City</span>
+                <h1 class="text-5xl md:text-7xl text-forest font-serif leading-tight">
+                    Crafted by Nature, <br><span class="italic font-normal text-terracotta">Made with Patience.</span>
+                </h1>
+                <p class="text-base md:text-lg text-forest/70 max-w-lg mx-auto lg:mx-0 font-light leading-relaxed">
+                    Discover handcrafted creations inspired by nature, simplicity, and timeless beauty. Every piece preserves a story born from the earth.
+                </p>
+                <div class="pt-4 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                    <a href="#portfolio" class="px-8 py-3.5 bg-forest text-cream text-sm tracking-widest uppercase font-medium hover:bg-clay transition-colors duration-300 shadow-md">
+                        Explore Collection
+                    </a>
+                    <a href="#about" class="px-8 py-3.5 border border-forest/30 text-forest text-sm tracking-widest uppercase font-medium hover:bg-forest hover:text-cream transition-all duration-300">
+                        Our Story
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Image Showcase -->
+            <div class="lg:col-span-6 relative flex justify-center items-center">
+                <div class="relative w-full max-w-md h-[450px] md:h-[520px]">
+                    <div class="absolute inset-4 border border-clay/20 z-0"></div>
+                    
+                    <!-- Main Hero Image Component -->
+                    <div class="absolute top-0 right-4 w-[85%] h-[85%] shadow-xl overflow-hidden rounded-xs">
+                        <!-- REPLACE WITH YOUR IMAGE PATH (e.g., src="hero-bracelets.jpg") -->
+                        <img src="images/image1.jpg" 
+                             alt="Earthy Crafts Handmade Bracelets" 
+                             id="hero-img-main"
+                             class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                    </div>
+                    
+                    <!-- Secondary Accent Frame Overlay -->
+                    <div class="absolute bottom-0 left-0 w-[55%] h-[45%] bg-forest p-6 text-cream shadow-2xl flex flex-col justify-between z-10">
+                        <span class="text-[10px] tracking-[0.2em] uppercase opacity-60">100% Handcrafted</span>
+                        <p class="font-serif text-lg italic leading-tight">"Embrace the organic textures of raw elements."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-2 opacity-60">
+            <span class="text-[10px] tracking-widest uppercase">Scroll</span>
+            <div class="w-[1px] h-8 bg-forest/50 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1/2 bg-forest animate-bounce"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. About Section -->
+    <section id="about" class="py-24 px-6 md:px-12 bg-cream text-forest overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <!-- Left Grid: Creative Image Split Layout -->
+            <div class="reveal grid grid-cols-2 gap-4 relative">
+                <div class="space-y-4">
+                    <div class="h-64 rounded-sm overflow-hidden shadow-xs relative group">
+                        <!-- REPLACE WITH YOUR IMAGE PATH (e.g., src="about-1.jpg") -->
+                        <img src="images/image2.jpg" alt="Beading and Crafting Materials" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-forest/20 flex items-end p-4">
+                            <span class="font-serif italic text-cream text-base">Handmade Bracelets</span>
+                        </div>
+                    </div>
+                    <div class="h-40 bg-sage/20 rounded-sm flex items-center justify-center p-4">
+                        <i class="fa-solid fa-seedling text-forest/40 text-3xl"></i>
+                    </div>
+                </div>
+                <div class="space-y-4 pt-8">
+                    <div class="h-40 bg-clay/20 rounded-sm flex items-center justify-center p-4">
+                        <i class="fa-solid fa-water text-forest/40 text-3xl"></i>
+                    </div>
+                    <div class="h-64 rounded-sm overflow-hidden shadow-xs relative group">
+                        <!-- REPLACE WITH YOUR IMAGE PATH (e.g., src="about-2.jpg") -->
+                        <img src="images/image3.jpg" alt="Handmade Ceramics Process" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-forest/20 flex items-end p-4">
+                            <span class="font-serif italic text-cream text-base">Natural Beading & Earthy Stones</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Grid: Storytelling Content -->
+            <div class="reveal space-y-6">
+                <span class="text-xs tracking-[0.3em] uppercase text-clay font-semibold">Honoring the Craft</span>
+                <h2 class="text-4xl md:text-5xl font-serif leading-tight">Rooted in Passion, Inspired by Simplicity</h2>
+                <div class="w-12 h-[1px] bg-terracotta"></div>
+                <p class="text-forest/80 font-light leading-relaxed">
+                    Born in the heart of Naga City, Camarines Sur, **Earthy Crafts** bloomed from a desire to reconnect daily style with the natural cadence of the earth. We curate timeless, slow-made accessories and home accents for those who appreciate true artistry.
+                </p>
+                <p class="text-forest/80 font-light leading-relaxed">
+                    Every earth-toned string, luminous pearl ornament, and textured ceramic profile we craft carries its own fingerprint. We purposefully forgo industrial speeds to protect a sustainable, localized, and deeply authentic crafting methodology.
+                </p>
+                
+                <div class="grid grid-cols-2 gap-4 pt-4">
+                    <div class="flex items-start space-x-3">
+                        <i class="fa-solid fa-leaf text-terracotta mt-1"></i>
+                        <div>
+                            <h4 class="font-medium text-sm tracking-wider uppercase">Sustainable</h4>
+                            <p class="text-xs text-forest/60">Sourced and made responsibly.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <i class="fa-solid fa-heart text-terracotta mt-1"></i>
+                        <div>
+                            <h4 class="font-medium text-sm tracking-wider uppercase">100% Honest Hand</h4>
+                            <p class="text-xs text-forest/60">No factory duplicates.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. Featured Creations (Masonry style layout) -->
+    <section id="featured" class="py-24 px-6 md:px-12 bg-beige">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <div class="text-center space-y-3">
+                <span class="text-xs tracking-[0.3em] uppercase text-clay font-semibold">The Curated Gallery</span>
+                <h2 class="text-4xl md:text-5xl font-serif">Featured Creations</h2>
+                <p class="text-sm text-forest/60 max-w-md mx-auto">A glimpse into our signature textures, warm earth palettes, and delicate details.</p>
+            </div>
+
+            <!-- Pseudo-Masonry Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+                
+                <!-- Item 1 (Tall) -->
+                <div class="reveal bg-cream group p-4 border border-sand/30 shadow-sm hover:shadow-xl transition-all duration-500">
+                    <div class="h-80 relative overflow-hidden flex items-center justify-center bg-sand/20">
+                        <!-- REPLACE WITH YOUR IMAGE PATH (e.g., src="featured-1.jpg") -->
+                        <img src="images/image7.jpg" alt="Rustic Clay Bead Set" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-forest/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-xs">
+                            <span class="text-cream font-serif italic text-lg tracking-wider border-b border-cream/40 pb-1">Want it? Dm us</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex justify-between items-baseline">
+                        <h3 class="font-serif text-xl font-bold">Rustic Clay Bead Set</h3>
+                        <span class="text-xs tracking-widest text-clay uppercase">Bracelets</span>
+                    </div>
+                </div>
+
+                <!-- Item 2 (Short) -->
+                <div class="reveal bg-cream group p-4 border border-sand/30 shadow-sm hover:shadow-xl transition-all duration-500 lg:mt-12">
+                    <div class="h-64 relative overflow-hidden flex items-center justify-center bg-sand/20">
+                        <!-- REPLACE WITH YOUR IMAGE PATH (e.g., src="featured-2.jpg") -->
+                        <img src="images/image8.jpg" alt="Irregular Pearl Accent" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-forest/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-xs">
+                            <span class="text-cream font-serif italic text-lg tracking-wider border-b border-cream/40 pb-1">Want it? Dm us</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex justify-between items-baseline">
+                        <h3 class="font-serif text-xl font-bold">Monocolor Bracelets</h3>
+                        <span class="text-xs tracking-widest text-clay uppercase">Bracelets</span>
+                    </div>
+                </div>
+
+                <!-- Item 3 (Tall) -->
+                <div class="reveal bg-cream group p-4 border border-sand/30 shadow-sm hover:shadow-xl transition-all duration-500">
+                    <div class="h-96 relative overflow-hidden flex items-center justify-center bg-sand/20">
+                        <!-- REPLACE WITH YOUR IMAGE PATH (e.g., src="featured-3.jpg") -->
+                        <img src="images/image9.jpg" alt="Raw Espresso Mug" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-forest/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-xs">
+                            <span class="text-cream font-serif italic text-lg tracking-wider border-b border-cream/40 pb-1">Want it? Dm us</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex justify-between items-baseline">
+                        <h3 class="font-serif text-xl font-bold">TABACO pipes</h3>
+                        <span class="text-xs tracking-widest text-clay uppercase">Selected</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Crafting Process Timeline -->
+    <section id="process" class="py-24 px-6 md:px-12 bg-cream">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center space-y-3 mb-16">
+                <span class="text-xs tracking-[0.3em] uppercase text-clay font-semibold">The Slow Method</span>
+                <h2 class="text-4xl md:text-5xl font-serif">How It Comes to Life</h2>
+                <div class="w-12 h-[1px] bg-terracotta mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                
+                <!-- Step 1 -->
+                <div class="reveal text-center space-y-4 relative group">
+                    <div class="w-16 h-16 mx-auto bg-beige border border-sand rounded-full flex items-center justify-center text-forest group-hover:bg-forest group-hover:text-cream transition-colors duration-300">
+                        <i class="fa-solid fa-compass text-lg"></i>
+                    </div>
+                    <span class="text-xs uppercase text-clay tracking-widest block font-medium">Step 01</span>
+                    <h3 class="font-serif text-xl font-semibold">Nature's Blueprint</h3>
+                    <p class="text-xs text-forest/70 leading-relaxed px-4">Gathering structural mood boards from local Bikolano landscapes, shorelines, and forest floors.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="reveal text-center space-y-4 relative group lg:pt-6">
+                    <div class="w-16 h-16 mx-auto bg-beige border border-sand rounded-full flex items-center justify-center text-forest group-hover:bg-forest group-hover:text-cream transition-colors duration-300">
+                        <i class="fa-solid fa-seedling text-lg"></i>
+                    </div>
+                    <span class="text-xs uppercase text-clay tracking-widest block font-medium">Step 02</span>
+                    <h3 class="font-serif text-xl font-semibold">Material Curation</h3>
+                    <p class="text-xs text-forest/70 leading-relaxed px-4">Selecting hand-cast stones, authentic raw pearls, and rich organic clay bodies selectively.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="reveal text-center space-y-4 relative group">
+                    <div class="w-16 h-16 mx-auto bg-beige border border-sand rounded-full flex items-center justify-center text-forest group-hover:bg-forest group-hover:text-cream transition-colors duration-300">
+                        <i class="fa-solid fa-hands text-lg"></i>
+                    </div>
+                    <span class="text-xs uppercase text-clay tracking-widest block font-medium">Step 03</span>
+                    <h3 class="font-serif text-xl font-semibold">Patient Assembly</h3>
+                    <p class="text-xs text-forest/70 leading-relaxed px-4">Each bead is tightly strung and every handle shaped intentionally by human hands alone.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="reveal text-center space-y-4 relative group lg:pt-6">
+                    <div class="w-16 h-16 mx-auto bg-beige border border-sand rounded-full flex items-center justify-center text-forest group-hover:bg-forest group-hover:text-cream transition-colors duration-300">
+                        <i class="fa-solid fa-box-open text-lg"></i>
+                    </div>
+                    <span class="text-xs uppercase text-clay tracking-widest block font-medium">Step 04</span>
+                    <h3 class="font-serif text-xl font-semibold">Finishing Touches</h3>
+                    <p class="text-xs text-forest/70 leading-relaxed px-4">Wrapped gently in recycled linen pouches, ready to join your conscious lifestyle space.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Portfolio Showcase (With Filter Capabilities) -->
+    <section id="portfolio" class="py-24 px-6 md:px-12 bg-beige overflow-hidden">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+                <div class="space-y-2">
+                    <span class="text-xs tracking-[0.3em] uppercase text-clay font-semibold">The Studio Archives</span>
+                    <h2 class="text-4xl md:text-5xl font-serif">Comprehensive Portfolio</h2>
+                </div>
+                
+                <div class="flex flex-wrap gap-2 text-xs uppercase tracking-widest font-medium">
+                    <button class="filter-btn px-4 py-2 bg-forest text-cream border border-forest transition-all" data-category="all">All</button>
+                    <button class="filter-btn px-4 py-2 bg-transparent text-forest/70 border border-forest/10 hover:border-forest transition-all" data-category="bracelets">Bracelets</button>
+                    <button class="filter-btn px-4 py-2 bg-transparent text-forest/70 border border-forest/10 hover:border-forest transition-all" data-category="ceramics">Ceramics</button>
+                    <button class="filter-btn px-4 py-2 bg-transparent text-forest/70 border border-forest/10 hover:border-forest transition-all" data-category="accessories">Accessories</button>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid Layout Container -->
+            <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 transition-all duration-500">
+                
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item reveal bg-cream p-3 border border-sand/20" data-category="bracelets">
+                    <!-- REPLACE WITH YOUR IMAGE PATH (e.g., data-img="bracelet1.jpg") -->
+                    <div class="h-60 flex items-center justify-center relative group cursor-pointer overflow-hidden rounded-xs bg-sand/10" 
+                         data-img="images/image11.jpg"
+                         onclick="openLightbox('Sienna Earth Strand', 'Bracelets', this.getAttribute('data-img'))">
+                        <img src="images/image11.jpg" alt="Sienna Earth Strand" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-forest/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fa-solid fa-expand text-cream text-lg"></i>
+                        </div>
+                    </div>
+                    <p class="font-serif mt-3 text-lg font-bold">Sienna Earth Strand</p>
+                    <span class="text-[10px] uppercase tracking-widest text-clay">Bracelets</span>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item reveal bg-cream p-3 border border-sand/20" data-category="ceramics">
+                    <!-- REPLACE WITH YOUR IMAGE PATH (e.g., data-img="mug1.jpg") -->
+                    <div class="h-60 flex items-center justify-center relative group cursor-pointer overflow-hidden rounded-xs bg-sand/10" 
+                         data-img="https://images.unsplash.com/photo-1610601594989-61b408503201?auto=format&fit=crop&w=600&q=80"
+                         onclick="openLightbox('Bikol Clay Tea Vessel', 'Ceramics', this.getAttribute('data-img'))">
+                        <img src="images/image1.jpg" alt="Bikol Clay Tea Vessel" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-forest/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fa-solid fa-expand text-cream text-lg"></i>
+                        </div>
+                    </div>
+                    <p class="font-serif mt-3 text-lg font-bold">Bikol Clay Tea Vessel</p>
+                    <span class="text-[10px] uppercase tracking-widest text-clay">Ceramics</span>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item reveal bg-cream p-3 border border-sand/20" data-category="accessories">
+                    <!-- REPLACE WITH YOUR IMAGE PATH (e.g., data-img="accessory1.jpg") -->
+                    <div class="h-60 flex items-center justify-center relative group cursor-pointer overflow-hidden rounded-xs bg-sand/10" 
+                         data-img="images/image3.jpg"
+                         onclick="openLightbox('Linen Carry Wrap', 'Accessories', this.getAttribute('data-img'))">
+                        <img src="images/image3.jpg" alt="Linen Carry Wrap" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-forest/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fa-solid fa-expand text-cream text-lg"></i>
+                        </div>
+                    </div>
+                    <p class="font-serif mt-3 text-lg font-bold">Linen Carry Wrap</p>
+                    <span class="text-[10px] uppercase tracking-widest text-clay">Accessories</span>
+                </div>
+
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item reveal bg-cream p-3 border border-sand/20" data-category="bracelets">
+                    <!-- REPLACE WITH YOUR IMAGE PATH (e.g., data-img="pearl1.jpg") -->
+                    <div class="h-60 flex items-center justify-center relative group cursor-pointer overflow-hidden rounded-xs bg-sand/10" 
+                         data-img="images/image4.jpg"
+                         onclick="openLightbox('Baroque Sea Pearl', 'Bracelets', this.getAttribute('data-img'))">
+                        <img src="images/image4.jpg" alt="Baroque Sea Pearl" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-forest/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fa-solid fa-expand text-cream text-lg"></i>
+                        </div>
+                    </div>
+                    <p class="font-serif mt-3 text-lg font-bold">Baroque Sea Pearl</p>
+                    <span class="text-[10px] uppercase tracking-widest text-clay">Bracelets</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal Component -->
+    <div id="lightbox" class="fixed inset-0 bg-forest/90 z-50 hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4 backdrop-blur-md">
+        <button class="absolute top-6 right-6 text-cream text-2xl" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></button>
+        <div class="bg-cream max-w-xl w-full p-8 text-center space-y-4 shadow-2xl relative">
+            <div class="w-full h-64 bg-sand/30 overflow-hidden mb-4 border border-sand/40 rounded-xs">
+                <img id="lightbox-img" src="" alt="Expanded Product View" class="w-full h-full object-cover">
+            </div>
+            <span id="lightbox-tag" class="text-[10px] tracking-[0.2em] uppercase text-clay font-medium block">Category</span>
+            <h3 id="lightbox-title" class="font-serif text-3xl text-forest font-bold">Item Title</h3>
+            <p class="text-sm text-forest/70 font-light max-w-sm mx-auto">This premium artisan design represents native raw properties structured carefully for our permanent organic collections.</p>
+            <div class="pt-2">
+                <button onclick="closeLightbox()" class="px-6 py-2 border border-forest text-forest text-xs tracking-widest uppercase hover:bg-forest hover:text-cream transition-colors">Return to Gallery</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. Brand Philosophy -->
+    <section class="relative py-32 bg-forest text-cream overflow-hidden text-center px-6">
+        <div class="absolute inset-0 opacity-5 bg-[radial-gradient(#FAF8F3_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-3xl mx-auto relative z-10 space-y-6">
+            <i class="fa-solid fa-quote-left text-sage/30 text-4xl block mx-auto"></i>
+            <h2 class="text-4xl md:text-6xl font-serif italic tracking-wide leading-snug px-4">
+                "Adopt the pace of nature. <br>Her secret is patience."
+            </h2>
+            <div class="w-8 h-[1px] bg-gold mx-auto my-4"></div>
+            <p class="text-xs tracking-[0.3em] uppercase text-sage font-medium">The Earthy Crafts Philosophy</p>
+        </div>
+    </section>
+
+    <!-- 7. Testimonials Section -->
+    <section class="py-24 px-6 md:px-12 bg-cream">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <div class="text-center space-y-2">
+                <span class="text-xs tracking-[0.3em] uppercase text-clay font-semibold">Shared Joy</span>
+                <h2 class="text-4xl md:text-5xl font-serif">Kind Words from Collectors</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="reveal bg-beige p-8 border border-sand/30 space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex text-gold text-xs gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm text-forest/80 font-light italic leading-relaxed">"The earth-toned bracelet set feels like grounding armor. You can immediately feel the time spent sculpting and preparing each distinct element."</p>
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-base">Maria C.</h4>
+                        <span class="text-[10px] text-clay tracking-wider uppercase">Naga City Collector</span>
+                    </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="reveal bg-beige p-8 border border-sand/30 space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex text-gold text-xs gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm text-forest/80 font-light italic leading-relaxed">"The textured espresso mug is an absolute masterpiece of touch. It completely subverts the sterile feeling of assembly-line ceramics."</p>
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-base">Julian E.</h4>
+                        <span class="text-[10px] text-clay tracking-wider uppercase">Manila Enthusiast</span>
+                    </div>
+                </div>
+                <!-- Review 3 -->
+                <div class="reveal bg-beige p-8 border border-sand/30 space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex text-gold text-xs gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star text-neutral-300"></i>
+                        </div>
+                        <p class="text-sm text-forest/80 font-light italic leading-relaxed">"Exquisite presentation and packing. Its organic nature is fully realized. A beautiful tribute to local Camarines Sur ingenuity."</p>
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-base">Lara V.</h4>
+                        <span class="text-[10px] text-clay tracking-wider uppercase">Conscious Consumer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Instagram Journal Studio Showcase -->
+    <section class="py-24 px-6 md:px-12 bg-beige border-t border-sand/20">
+        <div class="max-w-7xl mx-auto space-y-8">
+            <div class="flex justify-between items-end">
+                <div>
+                    <span class="text-xs tracking-[0.3em] uppercase text-clay font-semibold">Social Journal</span>
+                    <h2 class="text-3xl md:text-4xl font-serif">Studio Moments</h2>
+                </div>
+                <a href="#" class="text-xs uppercase tracking-widest font-medium text-forest hover:text-terracotta transition-colors border-b border-forest/30 pb-1">@EarthyCraftsStudio</a>
+            </div>
+
+            <!-- Instagram Grid Layout -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- REPLACE WITH YOUR IMAGE PATH (e.g., src="insta-1.jpg") -->
+                <div class="reveal aspect-square relative group overflow-hidden border border-sand/30 rounded-xs">
+                    <img src="images/image10.jpg" alt="Workshop table layout" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-forest/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-cream"><i class="fa-brands fa-instagram text-xl"></i></div>
+                </div>
+                <!-- REPLACE WITH YOUR IMAGE PATH (e.g., src="insta-2.jpg") -->
+                <div class="reveal aspect-square relative group overflow-hidden border border-sand/30 rounded-xs">
+                    <img src="images/image1.jpg" alt="Freshwater pearls process" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-forest/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-cream"><i class="fa-brands fa-instagram text-xl"></i></div>
+                </div>
+                <!-- REPLACE WITH YOUR IMAGE PATH (e.g., src="insta-3.jpg") -->
+                <div class="reveal aspect-square relative group overflow-hidden border border-sand/30 rounded-xs">
+                    <img src="images/image7.jpg" alt="Clay drying racks" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-forest/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-cream"><i class="fa-brands fa-instagram text-xl"></i></div>
+                </div>
+                <!-- REPLACE WITH YOUR IMAGE PATH (e.g., src="insta-4.jpg") -->
+                <div class="reveal aspect-square relative group overflow-hidden border border-sand/30 rounded-xs">
+                    <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=500&q=80" alt="Naga City Studio space" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-forest/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-cream"><i class="fa-brands fa-instagram text-xl"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Premium Elegant Contact Section -->
+    <section id="contact" class="py-24 px-6 md:px-12 bg-cream relative">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+            
+            <div class="lg:col-span-5 space-y-6">
+                <span class="text-xs tracking-[0.3em] uppercase text-clay font-semibold">Join the Circle</span>
+                <h2 class="text-4xl md:text-5xl font-serif">Let's Co-Create</h2>
+                <p class="text-sm text-forest/70 font-light leading-relaxed">
+                    Have an idea for a custom bracelet configuration, private bespoke collection, or wholesale design partnership? Drop us a thoughtful message. We respond at the speed of natural communication.
+                </p>
+
+                <div class="space-y-4 pt-4 text-sm">
+                    <div class="flex items-center space-x-3">
+                        <i class="fa-solid fa-location-dot text-terracotta w-5 text-center"></i>
+                        <span class="text-forest/80 font-light">Naga City, Camarines Sur, Philippines</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fa-solid fa-envelope text-terracotta w-5 text-center"></i>
+                        <span class="text-forest/80 font-light">yourbusinessemail@earthycrafts.studio</span>
+                    </div>
+                </div>
+
+                <div class="flex space-x-4 pt-2">
+                    <a href="https://web.facebook.com/profile.php?id=61572070153511" class="w-8 h-8 rounded-full border border-forest/20 text-forest hover:bg-forest hover:text-cream transition-colors flex items-center justify-center text-xs" aria-label="Facebook link"><i class="fa-brands fa-facebook-f"></i></a>
+                    <!-- <a href="#" class="w-8 h-8 rounded-full border border-forest/20 text-forest hover:bg-forest hover:text-cream transition-colors flex items-center justify-center text-xs" aria-label="Instagram link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-forest/20 text-forest hover:bg-forest hover:text-cream transition-colors flex items-center justify-center text-xs" aria-label="Pinterest link"><i class="fa-brands fa-pinterest-p"></i></a>-->
+                </div>
+            </div>
+
+            <!-- Form Column -->
+            <div class="lg:col-span-7 bg-beige p-8 border border-sand/30 shadow-xs">
+                <form onsubmit="event.preventDefault(); alert('Thank you for connecting with Earthy Crafts. We will reach out thoughtfully.');" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="space-y-1">
+                            <label for="name" class="text-[10px] tracking-widest uppercase font-semibold text-clay">Your Name</label>
+                            <input type="text" id="name" required class="w-full bg-cream border-b border-sand/60 focus:border-forest p-3 text-sm text-forest outline-none transition-colors">
+                        </div>
+                        <div class="space-y-1">
+                            <label for="email" class="text-[10px] tracking-widest uppercase font-semibold text-clay">Email Address</label>
+                            <input type="email" id="email" required class="w-full bg-cream border-b border-sand/60 focus:border-forest p-3 text-sm text-forest outline-none transition-colors">
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <label for="interest" class="text-[10px] tracking-widest uppercase font-semibold text-clay">Primary Interest</label>
+                        <select id="interest" class="w-full bg-cream border-b border-sand/60 focus:border-forest p-3 text-sm text-forest outline-none transition-colors">
+                            <option>Custom Bracelet Order</option>
+                            <option>Ceramics Gallery Viewing</option>
+                            <option>Creative Partnership</option>
+                            <option>General Studio Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="space-y-1">
+                        <label for="message" class="text-[10px] tracking-widest uppercase font-semibold text-clay">Your Message</label>
+                        <textarea id="message" rows="4" required class="w-full bg-cream border-b border-sand/60 focus:border-forest p-3 text-sm text-forest outline-none transition-colors resize-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-forest text-cream text-xs uppercase tracking-[0.2em] font-medium hover:bg-clay transition-colors duration-300 shadow-sm">
+                        Send Letter
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 10. Footer Section -->
+    <footer class="bg-forest text-cream py-16 px-6 md:px-12 border-t border-cream/10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+            <div class="space-y-2">
+                <h3 class="text-3xl font-serif tracking-wide">Earthy Crafts.</h3>
+                <p class="text-xs text-sage font-light">Handcrafted Artisan Studio from Naga City, PH</p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-6 text-xs uppercase tracking-widest text-cream/70">
+                <a href="#about" class="hover:text-cream transition-colors">Our Story</a>
+                <a href="#featured" class="hover:text-cream transition-colors">Featured Portfolio</a>
+                <a href="#process" class="hover:text-cream transition-colors">Process Method</a>
+                <a href="#contact" class="hover:text-cream transition-colors">Get in Touch</a>
+            </div>
+
+            <div class="text-xs text-cream/40 space-y-1 text-center md:text-right">
+                <p>&copy; 2026 Earthy Crafts. All Rights Reserved.</p>
+                <p class="font-serif italic text-[10px] tracking-wide text-sage/60">Patience & Nature as Architecture</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Pure Frontend Functional Scripting -->
+    <script>
+        // 1. Loading Animation dismissal logic
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('opacity-0');
+                setTimeout(() => loader.remove(), 700);
+            }, 800);
+        });
+
+        // 2. Responsive Mobile Navigation Menu Drawer toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 3. Smooth Scroll-Driven Entry Reveal Animations Logic
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            const triggerBottom = window.innerHeight * 0.85;
+            revealElements.forEach(el => {
+                const elTop = el.getBoundingClientRect().top;
+                if (elTop < triggerBottom) {
+                    el.classList.add('active');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+
+        // 4. Client Side Portfolio Grid Category Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-forest', 'text-cream');
+                    b.classList.add('bg-transparent', 'text-forest/70', 'border-forest/10');
+                });
+                
+                btn.classList.add('bg-forest', 'text-cream');
+                btn.classList.remove('bg-transparent', 'text-forest/70');
+
+                const selectedCategory = btn.getAttribute('data-category');
+
+                portfolioItems.forEach(item => {
+                    if (selectedCategory === 'all' || item.getAttribute('data-category') === selectedCategory) {
+                        item.style.display = 'block';
+                        setTimeout(() => item.style.opacity = '1', 50);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(() => item.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+
+        // 5. Interactive Lightbox Preview Operations (Dynamically captures Image URL)
+        const lightbox = document.getElementById('lightbox');
+        const lightboxTitle = document.getElementById('lightbox-title');
+        const lightboxTag = document.getElementById('lightbox-tag');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(title, category, imgSrc) {
+            lightboxTitle.innerText = title;
+            lightboxTag.innerText = category;
+            lightboxImg.src = imgSrc;
+            lightbox.classList.remove('hidden');
+            setTimeout(() => lightbox.classList.add('opacity-100'), 10);
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('opacity-100');
+            setTimeout(() => lightbox.classList.add('hidden'), 300);
+        }
+    </script>
+</body>
+</html>
